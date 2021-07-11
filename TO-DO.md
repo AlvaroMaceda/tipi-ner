@@ -1,1 +1,7 @@
-- [ ] Create a first test
+- [ ] Configure logging as in the other tipi apps
+- [ ] Search information about Flask-restplus
+- [ ] Search information about Redis caching
+
+
+- [x] Solve warning: `Coverage.py warning: No data was collected. (no-data-collected) WARNING: Failed to generate report: No data to report.`
+- [x] Create a first test
