@@ -1,19 +1,3 @@
 -r requirements.txt
-
-## Requirements
-
-* Python 3.6
-* Virtualenv (created and activated)
-
-
-## Setup
-
-TO-DO: review this
-```
-git clone git@github.com:AlvaroMaceda/tipi-ner.git
-cd tipi_ner
-pip install -r requirements_dev.txt
-set -a
-source .env
-python setup.py develop
-```
+pytest==6.2.4
+pytest-cov==2.12.1

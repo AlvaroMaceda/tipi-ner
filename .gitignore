@@ -1,1 +1,12 @@
 .env
+
+.coverage
+htmlcov/
+
+__pycache__
+*.pyc
+
+Pipfile
+Pipfile.lock
+
+
