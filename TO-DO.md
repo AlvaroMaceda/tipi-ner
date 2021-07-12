@@ -1,3 +1,5 @@
+- [ ] Solve "RuntimeError: CUDA error: out of memory"
+- [ ] See how to download the pretrained model and where to store it
 - [ ] Configure logging as in the other tipi apps
 - [ ] Search information about Flask-restplus
 - [ ] Search information about Redis caching

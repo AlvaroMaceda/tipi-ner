@@ -6,6 +6,8 @@ htmlcov/
 __pycache__
 *.pyc
 
+ner_spanish_large/
+
 Pipfile
 Pipfile.lock
 
