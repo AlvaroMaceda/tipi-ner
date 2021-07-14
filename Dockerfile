@@ -10,6 +10,6 @@ RUN pip install -r /app/requirements.txt
 COPY . /app/
 WORKDIR /app
 
-ENV FLASK_APP=scanner_backend/app.py
+ENV FLASK_APP=ner/app.py
 
 CMD gunicorn --bind 0.0.0.0:5000 --access-logfile - scanner_backend.wsgi:app
