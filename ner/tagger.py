@@ -13,20 +13,21 @@ from flair.embeddings import TokenEmbeddings, WordEmbeddings, StackedEmbeddings,
 
 class Tagger():
     def __init__(self):
-        pass
+        # Slow operation, but done only on initializing app
+        self._tagger = SequenceTagger.load('ner_spanish_large/pythorch_model.bin')
+        print("Tagger loaded")
 
     def foo(self, text):
         sentence = Sentence(text, use_tokenizer = True)
-        # tagger = SequenceTagger.load('resources/taggers/example-ner/best-model.pt')
-        # import os
-        # print(os.getcwd())
-        tagger = SequenceTagger.load('ner_spanish_large/pythorch_model.bin')
-        # tagger = SequenceTagger.load('ner-multi')
-        tagger.predict(sentence)
+        self._tagger.predict(sentence)
 
         # iterate over entities and print
         for entity in sentence.get_spans('ner'):
             print(entity)
+
+        print(sentence.to_dict(tag_type='ner')['entities'])
+
+        return sentence.to_dict(tag_type='ner')
 
     def test(self):
         print("testing")

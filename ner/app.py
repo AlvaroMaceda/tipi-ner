@@ -1,6 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
 from ner.settings import Config
+from ner.tagger import Tagger
+
+tagger = Tagger()
 
 def create_app(config=Config):
     app = Flask(__name__)
@@ -9,6 +12,11 @@ def create_app(config=Config):
     @app.route('/ping', methods=['GET', 'POST'])
     def ping():
         return 'pong'
+
+    @app.route('/tag', methods=['GET', 'POST'])
+    def tag():
+        res = tagger.foo("Bertín Osborne se fue a comer jamón Navidul a Santiago de Compostela")
+        return 'this should return something with sense'
 
     # logging_conf_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../logging.conf'))
     # logging.config.fileConfig(logging_conf_path)
