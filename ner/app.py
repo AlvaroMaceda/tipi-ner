@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_cors import CORS
 from ner.settings import Config
 from ner.tagger import Tagger
@@ -15,6 +15,7 @@ def create_app(config=Config):
 
     @app.route('/tag', methods=['GET', 'POST'])
     def tag():
+        text = request.get_json()
         res = tagger.foo("Bertín Osborne se fue a comer jamón Navidul a Santiago de Compostela")
         return 'this should return something with sense'
 

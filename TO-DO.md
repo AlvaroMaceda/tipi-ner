@@ -1,4 +1,5 @@
 - [ ] Check if tagger is thread-safe
+- [ ] flask-restplus is unmantained
 - [ ] Ask for what should be the format of the result
 - [ ] See how to download the pretrained model and where to store it. Docker? What is the deployment model?
 - [ ] Configure logging as in the other tipi apps
