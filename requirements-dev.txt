@@ -1,4 +1,6 @@
 -r requirements.txt
+uvicorn==0.15.0
+
 pytest==6.2.4
 pytest-cov==2.12.1
 
